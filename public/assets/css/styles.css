@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-ext-400.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-400.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-ext-500.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-500.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-ext-700.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/zen-maru-gothic-latin-700.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+[data-bs-theme='dark'] {
+    --bs-font-sans-serif: "Zen Maru Gothic", system-ui, sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-bg: #12110f;
+    --bs-body-bg-rgb: 18, 17, 15;
+    --bs-body-color: #f6f1ea;
+    --bs-body-color-rgb: 246, 241, 234;
+    --bs-emphasis-color: #fffaf4;
+    --bs-emphasis-color-rgb: 255, 250, 244;
+    --bs-secondary-color: rgba(246, 241, 234, 0.68);
+    --bs-secondary-color-rgb: 246, 241, 234;
+    --bs-tertiary-bg: #1c1a17;
+    --bs-tertiary-bg-rgb: 28, 26, 23;
+    --bs-secondary-bg: #26231f;
+    --bs-secondary-bg-rgb: 38, 35, 31;
+    --bs-border-color: rgba(246, 241, 234, 0.1);
+    --bs-primary: #e39b64;
+    --bs-primary-rgb: 227, 155, 100;
+    --bs-primary-text-emphasis: #f0c09a;
+    --bs-primary-bg-subtle: rgba(227, 155, 100, 0.16);
+    --bs-link-color: #f0c09a;
+    --bs-link-hover-color: #f6d4b8;
+    --bs-link-color-rgb: 240, 192, 154;
+    --bs-link-hover-color-rgb: 246, 212, 184;
+    --bs-border-radius: 1rem;
+    --bs-border-radius-sm: 0.7rem;
+    --bs-border-radius-lg: 1.25rem;
+    --bs-focus-ring-color: rgba(227, 155, 100, 0.45);
+}
+
+.btn-primary {
+    --bs-btn-color: #1c140e;
+    --bs-btn-bg: #e39b64;
+    --bs-btn-border-color: #e39b64;
+    --bs-btn-hover-color: #1c140e;
+    --bs-btn-hover-bg: #f0b48a;
+    --bs-btn-hover-border-color: #f0b48a;
+    --bs-btn-active-color: #1c140e;
+    --bs-btn-active-bg: #d4894f;
+    --bs-btn-active-border-color: #d4894f;
+    --bs-btn-disabled-color: #1c140e;
+    --bs-btn-disabled-bg: #e39b64;
+    --bs-btn-disabled-border-color: #e39b64;
+    --bs-btn-focus-shadow-rgb: 227, 155, 100;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #f0c09a;
+    --bs-btn-border-color: #e39b64;
+    --bs-btn-hover-color: #1c140e;
+    --bs-btn-hover-bg: #e39b64;
+    --bs-btn-hover-border-color: #e39b64;
+    --bs-btn-active-color: #1c140e;
+    --bs-btn-active-bg: #d4894f;
+    --bs-btn-active-border-color: #d4894f;
+    --bs-btn-disabled-color: #e39b64;
+    --bs-btn-disabled-border-color: #e39b64;
+    --bs-btn-focus-shadow-rgb: 227, 155, 100;
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-color: #1c140e;
+    --bs-nav-pills-link-active-bg: #e39b64;
+}
+
+.form-check-input:checked {
+    background-color: #e39b64;
+    border-color: #c9844e;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #e39b64;
+    box-shadow: 0 0 0 0.25rem rgba(227, 155, 100, 0.28);
+}
+
+body {
+    background:
+        radial-gradient(ellipse 80% 40% at 10% -10%, rgba(227, 155, 100, 0.16), transparent 50%),
+        var(--bs-body-bg);
+}
+
+.site-header {
+    background: rgba(18, 17, 15, 0.86);
+    backdrop-filter: blur(16px);
+}
+
+.hero-carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+    height: min(72vh, 680px);
+}
+
+.hero-copy {
+    background: linear-gradient(180deg, transparent, rgba(12, 10, 8, 0.88) 55%);
+}
+
+.ratio-portrait {
+    aspect-ratio: 3 / 4;
+}
+
+.ratio-tall {
+    aspect-ratio: 4 / 5;
+}

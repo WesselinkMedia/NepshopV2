@@ -1,0 +1,8 @@
+.env
+opdracht.md
+test.md
+storage/uploads/*
+!storage/uploads/.gitkeep
+public/assets/uploads/*
+!public/assets/uploads/products/
+!public/assets/uploads/products/.gitkeep
