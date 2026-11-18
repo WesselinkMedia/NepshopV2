@@ -61,11 +61,31 @@ function show_product(int $productId): void
         }
     }
 
-    $title = $product === null ? 'Product' : (string) $product['product_name'];
+    if ($product !== null) {
+        $title = (string) $product['product_name'];
+    } elseif ($notFound) {
+        $title = 'Product niet gevonden';
+    } else {
+        $title = 'Product niet beschikbaar';
+    }
     $imgUrl = $product !== null && valid_http_url((string) $product['img_url']) ? (string) $product['img_url'] : '';
+    $priceCents = $product === null ? null : money_to_cents((string) $product['product_price']);
+    $inStock = false;
+    foreach ($sizes as $amount) {
+        if ((int) $amount > 0) {
+            $inStock = true;
+            break;
+        }
+    }
 
     render('product', [
         'title' => $title,
+        'description' => $product === null ? (string) $pageError : (string) $product['product_description'],
+        'ogType' => $product === null ? 'website' : 'product',
+        'ogImage' => $imgUrl !== '' ? $imgUrl : null,
+        'ogImageAlt' => $product === null ? null : (string) $product['product_name'],
+        'ogPrice' => $priceCents === null ? null : cents_to_money($priceCents),
+        'ogAvailability' => $product === null ? null : ($inStock ? 'instock' : 'oos'),
         'product' => $product,
         'pageError' => $pageError,
         'notFound' => $notFound,

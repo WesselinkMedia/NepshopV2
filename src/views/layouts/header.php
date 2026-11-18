@@ -6,14 +6,56 @@ $navItems = [
     '/faqs' => 'FAQs',
     '/over-ons' => 'Over ons',
 ];
+$og = open_graph([
+    'title' => $title ?? 'Nepshop',
+    'page' => $page ?? '',
+    'description' => $description ?? null,
+    'type' => $ogType ?? null,
+    'image' => $ogImage ?? null,
+    'image_alt' => $ogImageAlt ?? null,
+    'price' => $ogPrice ?? null,
+    'availability' => $ogAvailability ?? null,
+]);
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" prefix="og: https://ogp.me/ns#<?php echo $og['type'] === 'product' ? ' product: https://ogp.me/ns/product#' : ''; ?>">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo e($title); ?></title>
+    <title><?php echo e($og['title']); ?></title>
+    <meta name="description" content="<?php echo e($og['description']); ?>">
+    <link rel="canonical" href="<?php echo e($og['url']); ?>">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="nepshop">
+    <meta property="og:type" content="<?php echo e($og['type']); ?>">
+    <meta property="og:title" content="<?php echo e($og['title']); ?>">
+    <meta property="og:description" content="<?php echo e($og['description']); ?>">
+    <meta property="og:url" content="<?php echo e($og['url']); ?>">
+    <meta property="og:image" content="<?php echo e($og['image']); ?>">
+<?php if ($og['secure_image'] !== null) { ?>
+    <meta property="og:image:secure_url" content="<?php echo e($og['secure_image']); ?>">
+<?php } ?>
+    <meta property="og:image:alt" content="<?php echo e($og['image_alt']); ?>">
+<?php if ($og['image_width'] !== null && $og['image_height'] !== null) { ?>
+    <meta property="og:image:width" content="<?php echo (int) $og['image_width']; ?>">
+    <meta property="og:image:height" content="<?php echo (int) $og['image_height']; ?>">
+<?php } ?>
+<?php if ($og['image_type'] !== null) { ?>
+    <meta property="og:image:type" content="<?php echo e($og['image_type']); ?>">
+<?php } ?>
+<?php if ($og['price'] !== null) { ?>
+    <meta property="product:price:amount" content="<?php echo e($og['price']); ?>">
+    <meta property="product:price:currency" content="EUR">
+<?php } ?>
+<?php if ($og['availability'] !== null) { ?>
+    <meta property="product:availability" content="<?php echo e($og['availability']); ?>">
+<?php } ?>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo e($og['title']); ?>">
+    <meta name="twitter:description" content="<?php echo e($og['description']); ?>">
+    <meta name="twitter:image" content="<?php echo e($og['image']); ?>">
+    <meta name="twitter:image:alt" content="<?php echo e($og['image_alt']); ?>">
     <link rel="stylesheet" href="/assets/vendor/bootstrap/5.3.8/bootstrap.min.css">
     <script src="/assets/vendor/bootstrap/5.3.8/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/assets/css/styles.css?v=9">
