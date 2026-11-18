@@ -2,7 +2,7 @@
 
 **Work in progress.** A fictional webshop for practicing JavaScript, PHP and MariaDB.
 
-PHP 8, MariaDB, JavaScript and Bootstrap. The web root is `public/`. `public/index.php` starts the app, `src/router.php` chooses the page and `src/api.php` handles the JSON endpoints. With Laravel Herd the site is at `http://nepshop-v2.test`.
+PHP 8, MariaDB, JavaScript and Bootstrap. `public/index.php` starts the app, `src/router.php` chooses the page and `src/api.php` handles the JSON endpoints.
 
 ## Demo data
 
@@ -18,10 +18,10 @@ The seed also adds six products and sample orders for these accounts. Accounts c
 
 ## Installation
 
-```bash
-cp .env.example .env
-```
+PHP 8 and MariaDB. The web root is `public/`. With Laravel Herd the site is at `http://nepshop-v2.test`.
 
-## Temporary
+1. Copy `.env.example` to `.env`. Set `MARIADB_USERNAME`, `MARIADB_PASSWORD` and `DB_NAME`. The app connects to MariaDB on `127.0.0.1`. `POSTCODE_APIKEY` is optional and only used for the address lookup.
+2. Import `database/schema.sql`, then `database/seed.sql`. Run the seed once, on empty `products`, `users` and `orders` tables.
+3. Open the site and sign in with an account from the table above.
 
-Fill in the database user, password, database name and optional postcode API key in `.env`. Product images are URLs, so no upload folder is needed. Import the seed once, on empty `products`, `users` and `orders` tables.
+Product images are URLs, so no upload folder is needed.
