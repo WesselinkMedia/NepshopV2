@@ -24,4 +24,6 @@ PHP 8 and MariaDB. The web root is `public/`. With Laravel Herd the site is at `
 2. Import `database/schema.sql`, then `database/seed.sql`. Run the seed once, on empty `products`, `users` and `orders` tables.
 3. Open the site and sign in with an account from the table above.
 
+## Temporary
+
 Product images are URLs, so no upload folder is needed.
